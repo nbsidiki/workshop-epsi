@@ -1,0 +1,21 @@
+@import '~assets/sass/utils/styleSheetVariables';
+
+.linkGrid {
+  border-top: solid 1px map_get(map_get($colors, 'grey-2'), 'primary');
+
+  .linkGridItem {
+    border: solid 1px map_get(map_get($colors, 'grey-2'), 'primary');
+    border-top: 0;
+    border-left: 0;
+    background-color: white;
+    padding: 25px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+
+    .linkContent {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

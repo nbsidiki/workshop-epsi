@@ -1,0 +1,14 @@
+@import '~assets/sass/utils/styleSheetVariables';
+
+.linkButton {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  &.animated {
+    @extend %animatedForward;
+  }
+}

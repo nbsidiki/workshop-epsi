@@ -1,0 +1,374 @@
+@import '~assets/sass/utils/styleSheetVariables';
+
+/* BUTTONS */
+
+/*doc
+---
+title: Buttons
+name: carreBtn
+category: buttons
+---
+```html_example
+
+<h1 class='mt-50'>Buttons</h1>
+
+    <button class='btnCarre btnCarre-primary'>Primary</button>
+    <button class='btnCarre btnCarre-secondary'>Secondary</button>
+    <button class='btnCarre btnCarre-outline'>Outline</button>
+    <button class='btnCarre btnCarre-outline validated flex flex-alignCenter'><i class="icon-short-check size-medium mr-5"></i>Document téléchargé</button>
+
+
+<h1 class='mt-50'> Arrows</h1>
+
+    <button class='btnCarre btnCarre-carre arrow-primary '><i class='icon  icon-short-arrow-next'></i></button>
+    <button class='btnCarre btnCarre-carre arrow-primary '><i class='icon  icon-short-arrow-prev'></i></button>
+    <button class='btnCarre btnCarre-carre arrow-white '><i class='icon  icon-short-arrow-next'></i></button>
+    <button class='btnCarre btnCarre-carre arrow-white '><i class='icon  icon-short-arrow-prev'></i></button>
+
+<h1 class='mt-50'>Panier</h1>
+
+    <button class='btnCarre btnCarre-carre shop-primary'><i class='icon  icon-e-commande'></i></button>
+    <button class='btnCarre btnCarre-carre shop-white'><i class='icon  icon-e-commande'></i></button>
+    <button class='btnCarre btnCarre-carre shop-white alreadyAdded'><i class='icon  icon-e-commande'></i></button>
+    <button class='btnCarre btnCarre-carre shop-transparent'><i class='icon icon-e-commande'></i></button>
+
+    
+<h1 class='mt-50'>Table buttons</h1>
+
+  <button class='btnCarre btnCarre-carre btnCarre-rounded'><i class='icon icon-short-online-sale size-large'></i></button>
+  <button class='btnCarre btnCarre-carre btnCarre-rounded active'><i class='icon icon-short-place-order size-large'></i></button>
+
+<h1 class='mt-50'>Radio</h1>
+
+
+      <label class="containerBtnCarreRadio" >
+        <p>Oui</p>
+        <input type="radio" name="radio"/>
+        <span class=btnCarre-radio></span>
+      </label>
+
+      <label class="containerBtnCarreRadio" >
+        <p>Non</p>
+        <input type="radio" name="radio"/>
+        <span class=btnCarre-radio></span>
+      </label>
+
+```
+*/
+
+/*doc
+---
+title: Aligner sur la gauche
+name: containerbuttonsright
+category: buttons
+---
+```html_example
+    <div class='containerBtnCarre-right bg-paleGrey w-50 p-50'>
+        <button class='btnCarre btnCarre-primary'>Primary</button>
+    </div>
+```
+*/
+
+/*doc
+---
+title: Aligner au centre
+name: containerbuttonscenter
+category: buttons
+---
+```html_example
+    <div class='containerBtnCarre-center bg-paleGrey w-50 p-50'>
+        <button class='btnCarre btnCarre-primary'>Primary</button>
+    </div>
+```
+*/
+
+/*doc
+---
+title: Aligner sur la droite
+name: containerbuttonsleft
+category: buttons
+---
+```html_example
+    <div class='containerBtnCarre-left bg-paleGrey w-50 p-50'>
+        <button class='btnCarre btnCarre-primary'>Primary</button>
+    </div>
+```
+*/
+
+.label {
+  &Green {
+  }
+}
+
+.containerBtnCarre {
+  &-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &Radio {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 10px;
+
+    p {
+      //font-size: $small;
+      margin-left: 30px;
+      /*font-weight: 300;*/
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &:hover input ~ .btnCarre-radio {
+      //when hovered
+      background-color: transparent;
+      border: 1px solid map_get(map_get($colors, 'deep-orange'), 'primary');
+    }
+
+    input:checked ~ .btnCarre-radio {
+      background-color: transparent;
+
+      &:after {
+      }
+    }
+
+    input:checked ~ .btnCarre-radio:after {
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Icomoon', serif;
+      color: map_get(map_get($colors, 'moss-green'), 'primary');
+      content: '\e911';
+    }
+  }
+}
+
+.btnCarre {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  display: inline-flex;
+  cursor: pointer;
+  font-weight: $mediumW;
+  font-size: $mediumS;
+  @extend %animateAll;
+
+  &-primary {
+    background-color: map_get(map_get($colors, 'primary'), 'primary');
+    color: $white;
+    border-radius: 5px;
+    padding: 12px 24px;
+
+    &:hover {
+      color: map_get(map_get($colors, 'primary'), 'light');
+      box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.3);
+      font-weight: $mediumW;
+    }
+  }
+
+  &-secondary {
+    background-color: map_get(map_get($colors, 'grey-2'), 'primary');
+    color: map_get(map_get($colors, 'brown-grey'), 'primary');
+    border-radius: 5px;
+    padding: 12px 24px;
+
+    &:hover {
+      color: map_get(map_get($colors, 'brown-grey'), 'dark');
+      box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.3);
+      font-weight: $mediumW;
+    }
+
+    &:focus {
+      color: map_get(map_get($colors, 'brown-grey'), 'dark');
+    }
+  }
+
+  &-outline {
+    border: 1px solid map_get(map_get($colors, 'primary'), 'primary');
+    background-color: transparent;
+    color: map_get(map_get($colors, 'primary'), 'primary');
+    border-radius: 5px;
+    padding: 12px 24px;
+
+    &:hover {
+      color: map_get(map_get($colors, 'primary'), 'light');
+      box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.3);
+      font-weight: $mediumW;
+    }
+
+    &:focus {
+      color: map_get(map_get($colors, 'primary'), 'light');
+    }
+    &.validated {
+      background-color: map_get(map_get($colors, 'pale-grey'), 'primary');
+      border: none;
+    }
+  }
+
+  &-carre {
+    padding: 12px 16px;
+    font-size: $mediumS;
+    position: relative;
+
+    &.arrow-white {
+      color: $white;
+      background-color: map_get(map_get($colors, 'pale-grey'), 'primary');
+    }
+
+    &.arrow-primary {
+      color: $white;
+      background-color: map_get(map_get($colors, 'primary'), 'primary');
+    }
+
+    &.shop-primary {
+      color: $white;
+      background-color: map_get(map_get($colors, 'primary'), 'primary');
+    }
+    &.shop-white {
+      border: 1px solid map_get(map_get($colors, 'primary'), 'primary');
+      color: map_get(map_get($colors, 'primary'), 'primary');
+      background-color: $white;
+    }
+
+    &.alreadyAdded {
+      &:after {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        content: '\e911';
+        font-family: icomoon;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        background-color: map-get(map-get($colors, 'green-STATUS'), 'primary');
+        color: $white;
+        font-size: $tiny;
+      }
+    }
+
+    &.shop-transparent {
+      border: 1px solid map_get(map_get($colors, 'pale-grey'), 'primary');
+      color: $white;
+      background-color: transparent;
+    }
+
+    &:hover {
+      color: map_get(map_get($colors, 'primary'), 'light');
+      box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.3);
+      font-weight: $mediumW;
+    }
+
+    &:focus {
+      color: map_get(map_get($colors, 'primary'), 'light');
+    }
+  }
+
+  &-rounded {
+    width: 40px;
+    height: 40px;
+    flex: 0 1 auto;
+    padding: 8px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid map-get(map-get($colors, 'grey-2'), 'primary');
+    color: map-get(map-get($colors, 'grey-2'), 'primary');
+
+    &:hover,
+    &.active {
+      color: map-get(map-get($colors, 'deep-orange'), 'primary');
+    }
+  }
+
+  &-radio {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid map_get(map_get($colors, 'deep-orange'), 'primary');
+    border-radius: 50%;
+    margin-top: 5px;
+
+    &:after {
+    }
+  }
+
+  /*
+
+      &-absoluteCenter {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        text-align: center;
+
+        &:hover {
+          transform: translateX(-50%) scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+          position: relative;
+          transform: none;
+          left: unset;
+          width: max-content;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      */
+}
+
+.puceCarmin {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: ' ';
+    width: 5px;
+    height: 5px;
+    background-color: map_get(map_get($colors, 'primary'), 'primary');
+    margin-right: 8px;
+
+    @media (max-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: inline;
+  }
+}

@@ -1,0 +1,412 @@
+@import '~assets/sass/utils/styleSheetVariables';
+/* Modals contents */
+
+/*doc
+---
+title: 1. Mise à jour KO
+name:  1. Mise à jour KO
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 450px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+          <img src="build/img/SVG/modals/maj-ko.svg">
+          <p class="text-center weight-medium size-medium fc-red-STATUS-primary mb-15">Votre mise à jour du compte agriculteur n'a pas été effectuée.</p>
+          <p class="text-center weight-light size-small">Dans le cadre de notre certification et de la réglementation en vigueur,
+  veuillez s'il vous plait mettre à jour les informations dans l'espace Profil de l'extranet afin d’accéder à l'ensemble des fonctionnalités.</p>
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>Mettre à jour</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+title: 2. Mise à jour OK
+name:  2. Mise à jour OK
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 450px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+          <img src="build/img/SVG/modals/maj-ok.svg">
+          <p class="text-center weight-medium size-medium fc-green-STATUS-primary mb-15">Votre demande de mise à jour a bien été enregistrée</p>
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>OK</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+title: 3. eShop choose postCode
+name:  3. eShop choose postCode
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 550px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+        <p class="size-medium weight-medium fc-primary-primary">Sélectionnez un code postal</p>
+        <span class="card-row cart-item">
+            <label class="containerBtnCarreRadio">
+                <p class="lh-17 weight-medium size-small">7 Rue Victor Hugo<p>
+                <p class="lh-17 weight-medium size-small">59350 Saint-André-lez-Lille</p>
+                <input type="radio" name="radio" />
+                <span class=btnCarre-radio></span>
+            </label>
+        </span>
+        <span class="card-row cart-item">
+          <label class="containerBtnCarreRadio">
+              <p class="lh-17 weight-medium size-small">Autre code postal</p>
+              <input type="radio" name="radio" />
+              <span class=btnCarre-radio></span>
+          </label>
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-6">
+              <div class="containerFormsCarreInput ">
+                <input name="input1" id="input1" type="text" placeholder="Ex: 75001" class='formsCarre' />
+              </div>
+              <label for="input1" class="label--input">Code postal <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+          </div>
+        </span>
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>Confirmer</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+title: 4. ordre de vente IMAT
+name:  4. ordre de vente IMAT
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 650px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+        <p class="size-medium weight-medium fc-primary-primary">Ordre de vente</p>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                <input name="input1" id="input1" type="text" placeholder="Ex: 75001" class='formsCarre' />
+              </div>
+              <label for="input1" class="label--input">Échéance <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+            <div class="containerColumn col-3 flex-justifyCenter">
+              <span class=" flex-directionRow flex-justifyStart flex-alignCenter w-100 h-100">
+                <p class="size-small weight-light fc-brownish-grey-primary mr-15 mr-15Mobile">Campagne</p>
+                <p class="size-small weight-medium ">2019</p>
+              </span>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                <input name="input1" id="input1" type="text" placeholder="Ex: 75001" class='formsCarre' />
+              </div>
+              <label for="input1" class="label--input">Contrat modèle IMAT <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+            <div class="containerColumn col-3 flex-justifyCenter">
+              <span class=" flex-directionRow flex-justifyStart flex-alignCenter w-100 h-100">
+                <p class="size-small weight-light fc-brownish-grey-primary mr-15 mr-15Mobile">Produit</p>
+                <p class="size-small weight-medium ">Colza</p>
+              </span>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                    <input name="input" id="input" type="text" placeholder="Nom" class='formsCarre--units w-50' />
+                    <label for="input" class="units">€/T</label>
+              </div>
+              <label for="input1" class="label--input">Prix objectif souhaité <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                    <input name="input" id="input" type="text" placeholder="Nom" class='formsCarre--units w-50' />
+                    <label for="input" class="units">T</label>
+              </div>
+              <label for="input1" class="label--input">Quantité souhaité <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cardProfil">
+          <div class="profil">
+            <div class="profil-row">
+              <span class="  --light">Date de paiement</span>
+              <span class="  --bold">31/05/2020</span>
+            </div>
+
+            <div class="profil-row">
+              <span class=" --light">Différentiel MATIF</span>
+              <span class=" --bold">-26 €/T</span>
+            </div>
+          </div>
+        </span>
+
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>Confirmer</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+---
+title: 5. vente IMAT en ligne
+name:  5. vente IMAT en ligne
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 650px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+        <p class="size-medium weight-medium fc-primary-primary">Vente IMAT en ligne</p>
+        <div class="marketAlert green mt-15 mt-15Mobile mb-15 mb-15Mobile">
+          <span class="marketAlert-state">Marchés ouverts</span>
+          <span class="marketAlert-timer"><i class="icon-short-heure weight-black mr-10 mr-10Mobile"></i>Fermeture dans 03h 05min et 12s</span>
+        </div>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                <input name="input1" id="input1" type="text" placeholder="Ex: 75001" class='formsCarre' />
+              </div>
+              <label for="input1" class="label--input">Échéance <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+            <div class="containerColumn col-3 flex-justifyCenter">
+              <span class=" flex-directionRow flex-justifyStart flex-alignCenter w-100 h-100">
+                <p class="size-small weight-light fc-brownish-grey-primary mr-15 mr-15Mobile">Campagne</p>
+                <p class="size-small weight-medium ">2019</p>
+              </span>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <div class="containerFormsCarreInput ">
+                <input name="input1" id="input1" type="text" placeholder="Ex: 75001" class='formsCarre' />
+              </div>
+              <label for="input1" class="label--input">Contrat <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cart-item">
+          <div class="form-row grid grid-6 grid-gap-16 m-0 pt-0 pt-0Mobile">
+            <div class="containerColumn col-3">
+              <p class="size-small weight-light fc-brownish-grey-primary mt-10 mt-10Mobile">Plafond restant à vendre : 200T</p>
+              <div class="containerFormsCarreInput ">
+                    <input name="input" id="input" type="text" placeholder="Nom" class='formsCarre--units w-50' />
+                    <label for="input" class="units">T</label>
+              </div>
+              <label for="input1" class="label--input">Quantité mise en vente <i class="fc-red-STATUS-primary">*</i></label>
+            </div>
+          </div>
+        </span>
+        <span class="card-row cardProfil">
+          <div class="profil">
+            <div class="profil-row">
+              <span class="  --light">Date de paiement</span>
+              <span class="  --bold">31/05/2020</span>
+            </div>
+
+            <div class="profil-row">
+              <span class=" --light">Différentiel MATIF</span>
+              <span class=" --bold">-26 €/T</span>
+            </div>
+            <div class="profil-row">
+              <span class=" --light">Cours MATIF</span>
+              <span class=" --bold">176 €/T</span>
+            </div>
+            <div class="profil-row">
+              <span class=" --light">Prix objectif net</span>
+              <span class=" --bold">150 €/T</span>
+            </div>
+          </div>
+        </span>
+
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>Confirmer</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+---
+title: 6. Vente IMAT KO
+name:  6. Vente IMAT KO
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 450px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+          <img src="build/img/SVG/modals/imat-ko.svg">
+          <p class="text-center weight-medium size-medium fc-red-STATUS-primary mb-15">Vous ne disposez pas de contrat IMAT pour ce type de céréale et la campagne <span class="weight-black">2018</span>.</p>
+          <p class="text-center weight-light size-small mt-10 mt-10Mobile">Veuillez contacter <span class="weight-medium">Michel Dupond</span> au <span class="weight-medium">06 12 34 56 89</span>  ou le <span class="weight-medium">03 21 24 11 00.</span></p>
+
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>OK</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+---
+title: 7. Commande OK
+name:  7. Commande OK
+category: Modals
+---
+```html_example
+<div style="width: 100%; height: 450px; position: relative">
+  <div class="modal">
+    <div class="rodal-dialog">
+      <div class="modal-header">
+          <i class="modalClose icon-short-close size-veryLarge"></i>
+      </div>
+      <div class="modal-body">
+          <img src="build/img/SVG/modals/command-ok.svg">
+          <p class="text-center weight-medium size-medium fc-green-STATUS-primary mb-15">Merci pour votre commande !</p>
+          <p class="text-center weight-light size-small mt-10 mt-10Mobile">Un email de confirmation avec une demande de signature électronique de votre
+bon de commande vient de vous être envoyé par email. </p>
+          <p class="text-center weight-light size-small mt-10 mt-10Mobile">Après signature du bon de commande, vous trouverez votre commande
+dans la section <a href="#" class=" weight-medium size-small fc-moss-green-primary">Mes commandes</a>.</p>
+      </div>
+      <div class="modal-footer">
+          <div class='containerBtnCarre-center w-100 p-25'>
+              <button class='btnCarre btnCarre-primary'>Retour à la page d'accueil</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+*/
+
+
+.modal .rodal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.7);
+  background-color: 'white';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  max-width: 580px;
+  z-index: 20;
+  padding: 22px;
+  bottom: unset;
+  right: unset;
+  background-color: $white;
+  overflow: scroll;
+
+  .modalClose {
+    cursor: pointer;
+    flex: 0 1 auto;
+  }
+
+  .modal-header {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .modal-body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+
+  }
+  .modal-footer {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-height: 700px) {
+  .modal .rodal-dialog {
+    top: 0;
+    transform: translate(-50%, 0);
+    overflow: scroll;
+    height: 100vh !important;
+
+  }
+}
