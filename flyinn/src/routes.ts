@@ -3,7 +3,7 @@ const routes = {
   HOME: "/",
   NEWS: "/news",
   PROFILE: "/profile",
-  SIGNIN: "/signin"
+  SIGNIN: "/signin",
 };
 
 export default routes;

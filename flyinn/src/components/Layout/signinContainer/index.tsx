@@ -10,7 +10,7 @@ interface ISigninContainer {
 const SigninContainer: React.FC<ISigninContainer> = ({ children }) => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
   return (
-    <div className="signinScreen">
+    <div className="signinScreen lg:h-full">
       <div className="signinScreen-header flex-1 flex-row justify-between ">
         <div className="signinScreen-logoContainer ml-3 mt-1">
           <img src="./logoGris.png" className=' h-20' />
@@ -25,9 +25,9 @@ const SigninContainer: React.FC<ISigninContainer> = ({ children }) => {
           <img src="./images.jpeg" className=' h-96 w-full' />
         </div> : <></>}
         <div className='flex-1  mr-6'>
-        {children}
+          {children}
         </div>
-        </div>
+      </div>
       <div className="signinScreen-footer">
         <p className="size-small weight-light fc-brownish-grey-primary mr-30 mr-15Mobile">Groupe 5</p>
       </div>

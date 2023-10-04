@@ -8,7 +8,9 @@ import LoginContainer from './components/Layout/LoginContainer'
 import LandingPageContainer from './components/Layout/LandingPageContainer'
 import Home from './components/LandingPage/home'
 import SigninContainer from './components/Layout/signinContainer'
-import Signin from './components/signin/login'
+import Signin from './components/signin/signin'
+import NavContainer from './components/Layout/navContainer'
+import Profile from './components/profile/profile'
 
 const Router: React.FC = observer(() => {
 
@@ -27,6 +29,11 @@ const Router: React.FC = observer(() => {
 
                 <Route path={routes.SIGNIN} element={<SigninContainer> <Signin /></SigninContainer>}>
                 </Route>
+
+                <Route path={routes.PROFILE} element={<NavContainer><Profile /></NavContainer>}>
+                </Route>
+
+
             </Routes>
 
         </>

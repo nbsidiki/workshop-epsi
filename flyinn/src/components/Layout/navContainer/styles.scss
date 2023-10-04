@@ -27,7 +27,7 @@ category: Login Layout
 ```
 */
 
-.signinScreen {
+.navScreen {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,8 +46,6 @@ category: Login Layout
   }
 
   &-body {
-    display: flex;
-    justify-content: space-between;
    //background-color:#003366;
     @media (max-width: 768px) {
       justify-content: flex-end;
