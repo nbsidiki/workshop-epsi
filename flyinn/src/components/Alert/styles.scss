@@ -1,0 +1,51 @@
+
+/* ALERTS */
+
+/*doc
+---
+title: 1. Market Alerts
+name: 1. Market Alerts
+category: Market Alerts
+---
+```html_example
+
+<h1 class="size-veryLarge weight-black mt-15 mb-15">Marchés ouverts</h1>
+
+<div class="marketAlert green">
+  <span class="marketAlert-state">Marchés ouverts</span>
+  <span class="marketAlert-timer"><i class="icon-short-heure weight-black mr-10 mr-10Mobile"></i>Fermeture dans 03h 05min et 12s</span>
+</div>
+
+<h1 class="size-veryLarge weight-black mt-15 mb-15">Marchés fermés</h1>
+
+<div class="marketAlert red">
+  <span class="marketAlert-state">Marchés fermés</span>
+  <span class="marketAlert-timer"><i class="icon-short-heure weight-black mr-10 mr-10Mobile"></i>Ouverture dans 03h 05min et 12s</span>
+</div>
+```
+*/
+
+.alert {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.marketAlert {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+}

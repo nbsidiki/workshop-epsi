@@ -1,0 +1,32 @@
+/* .selectedFileName {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  text-decoration: underline;
+} */
+
+.dragNdropInput-content {
+  .selectedFileContainer {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .selectedFileName {
+      font-weight: 500;
+    }
+
+    .icon-close {
+      cursor: pointer;
+    }
+  }
+}
+
+.dragActiveText {
+  height: 88px;
+}

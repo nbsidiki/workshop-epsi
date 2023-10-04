@@ -5,6 +5,10 @@ import { observer } from 'mobx-react-lite'
 import routes from './routes'
 import Login from './components/loginForm/login'
 import LoginContainer from './components/Layout/LoginContainer'
+import LandingPageContainer from './components/Layout/LandingPageContainer'
+import Home from './components/LandingPage/home'
+import SigninContainer from './components/Layout/signinContainer'
+import Signin from './components/signin/login'
 
 const Router: React.FC = observer(() => {
 
@@ -16,6 +20,12 @@ const Router: React.FC = observer(() => {
         <>
             <Routes>
                 <Route path={routes.LOGIN} element={<LoginContainer> <Login /></LoginContainer>}>
+                </Route>
+
+                <Route path={routes.HOME} element={<LandingPageContainer> <Home /></LandingPageContainer>}>
+                </Route>
+
+                <Route path={routes.SIGNIN} element={<SigninContainer> <Signin /></SigninContainer>}>
                 </Route>
             </Routes>
 

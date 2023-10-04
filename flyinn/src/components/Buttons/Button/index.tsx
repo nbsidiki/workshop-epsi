@@ -30,7 +30,7 @@ const Button: React.FC<IButtonProps> = ({
     <button
       onClick={onButtonClick}
       type={type}
-      className={`btnCarre btnCarre-${disabled ? 'secondary' : buttonClass} ${isLoading ? 'loading' : ''} ${className}`}
+      className={`btn btnCarre btnCarre-${disabled ? 'secondary' : buttonClass} ${isLoading ? 'loading' : ''} ${className}`}
     >
       {children}
     </button>

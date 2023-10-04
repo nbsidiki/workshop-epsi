@@ -1,0 +1,45 @@
+@import '~assets/sass/utils/styleSheetVariables';
+
+.containerFormsCarreInput {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  label.icon {
+    background-color: white;
+    padding: 16px 12px;
+    border-left: 1px solid map_get(map_get($colors, 'grey-2'), 'primary');
+    border-top: 1px solid map_get(map_get($colors, 'grey-2'), 'primary');
+    border-bottom: 1px solid map_get(map_get($colors, 'grey-2'), 'primary');
+    border-right: 0px;
+    color: map_get(map_get($colors, 'grey-2'), 'primary');
+    border-radius: 5px 0px 0px 5px;
+    display: block;
+    height: 48px;
+  }
+
+  .showPassword {
+    position: absolute;
+    right: 10px;
+
+    &.disabled {
+      &:after {
+        visibility: visible;
+      }
+    }
+
+    &:after {
+      content: '';
+      height: 1px;
+      width: 15px;
+      transform: rotate(45deg);
+      display: inline-block;
+      visibility: hidden;
+      position: absolute;
+      top: 9px;
+      background: #000;
+      left: 1px;
+    }
+  }
+}

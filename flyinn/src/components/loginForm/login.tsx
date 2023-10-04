@@ -21,9 +21,11 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center ">
-            <div className="bg-white p-8 rounded shadow-md w-96">
-                <h2 className="text-2xl font-semibold mb-4">Connexion</h2>
+        <div className="flex items-center justify-end vsm:ml-10 sm:ml-10 ">
+            <div className=" bg-gray-300 p-8 rounded-2xl shadow-md w-full h-96">
+                <div className='w-full justify-center flex'>
+                    <h2 className="text-2xl font-semibold  mb-4">Connexion</h2>
+                </div>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-600">Adresse e-mail:</label>
@@ -34,7 +36,7 @@ const Login: React.FC = () => {
                             value={email}
                             onChange={handleEmailChange}
                             required
-                            className="w-full border rounded px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                            className="w-full border rounded-2xl px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
                         />
                     </div>
                     <div className="mb-4">
@@ -46,15 +48,17 @@ const Login: React.FC = () => {
                             value={password}
                             onChange={handlePasswordChange}
                             required
-                            className="w-full border rounded px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
+                            className="w-full border rounded-2xl px-3 py-2 mt-1 focus:outline-none focus:border-blue-500"
                         />
                     </div>
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600"
-                    >
-                        Se connecter
-                    </button>
+                    <div className=' flex w-full justify-center'>
+                        <button
+                            type="submit"
+                            className="w-52 hover:bg-orange-400 bg-orange-500 text-white rounded-3xl  px-4 py-2"
+                        >
+                            connexion
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
