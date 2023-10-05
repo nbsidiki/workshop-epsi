@@ -6,36 +6,45 @@ import Loader from '../../../components/Loader'
 import LinkButton from '../../../components/Buttons/LinkButton'
 // import ContentLoader from 'react-content-loader'
 
-import fetch from '@utils/fetch'
+import fetch from '../../../utils/fetch'
+import { toast } from 'react-toastify'
 
 
 interface IArticleList { }
 
 const ArticleList: React.FC<IArticleList> = observer(() => {
 
+  const [data, setData] = useState([]);
+
   const renderArticleCard = (article: any, index: number) => (
-    <Link to={`/news/${article.id}`} key={index}>
-      <ArticleCard subtitle={article.excerpt} imageUrl={article.imageUrl ? article.imageUrl : ''} />
+    <Link to={`/findhome/${article.id}`} key={index}>
+      <ArticleCard subtitle={article.description_chambree} imageUrl={article.photo ? article.photo : ''} />
     </Link>
   )
 
-  
+
 
   useEffect(() => {
+    try {
+      const result: any = fetch('/chambres', 'get')
+      setData(result)
+    } catch (error: any) {
+      toast.error(error.message)
+    }
 
   }, [])
-  
+
 
   return (
     <>
-      <p className="size-veryLarge weight-black mb-30 flex-selfStart">Nos logement</p>
+      <h2 className="size-veryLarge weight-black mb-30 flex justify-center">Nos logement</h2>
 
-      {true ? (
+      {false ? (
         <Loader />
       ) : (
         <>
           <div className="grid grid-4 grid-gap-16 grid-1Mobile w-100 mt-15 weight">
-            {[].map((article, index) => renderArticleCard(article, index))}
+            {Array.isArray(data) && data.map((article, index) => renderArticleCard(article, index))}
             {/* {isPending && renderContentLoader(4)} */}
           </div>
         </>
