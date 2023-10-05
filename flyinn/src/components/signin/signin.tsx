@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Select from "../Fields/Select";
 import { Field } from 'formik';
+import fetch from '../../utils/fetch';
+import format from 'date-fns/format';
 
 const Signin: React.FC = () => {
     const [name, setName] = useState('');
@@ -41,10 +43,15 @@ const Signin: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Vous pouvez ajouter ici la logique pour vérifier les informations de connexion
-        // par exemple, en envoyant une requête au serveur
-        console.log('Email:', email);
-        console.log('Mot de passe:', password);
+        fetch('', 'POST', {
+            name: name,
+            prenom: prenom,
+            email: email,
+            password: password,
+            confirmPassword: confimPassword,
+            age: format(new Date(age), 'dd/MM/yyyy'),
+            userType: userType
+        })
     };
 
     return (
@@ -142,6 +149,7 @@ const Signin: React.FC = () => {
                         </div>
                     </div>
                     <div className=' flex w-full justify-center'>
+
                         <button
                             type="submit"
                             className="w-full lg:h-12 lg:mt-2 hover:bg-orange-400 bg-orange-500 text-white rounded-3xl  px-4 py-2"

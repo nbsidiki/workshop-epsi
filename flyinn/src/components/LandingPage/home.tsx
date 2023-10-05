@@ -12,7 +12,7 @@ const Home: React.FC = () => {
                     </p>
                 </div>
                 <div className=' flex w-full mt-4'>
-                    <Link to={'/signin'}>
+                    <Link to={'/signin'} className='w-full'>
                         <button
                             type="button"
                             className="w-full hover:bg-orange-400 bg-orange-500 text-white rounded-3xl  px-4 py-2"
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
                     </Link>
                 </div>
                 <div className=' flex w-full mt-4'>
-                    <Link to={'/login'}>
+                    <Link to={'/login'} className='w-full'>
                         <button
                             type="button"
                             className="w-full hover:bg-orange-400 bg-orange-500 text-white rounded-3xl  px-4 py-2"

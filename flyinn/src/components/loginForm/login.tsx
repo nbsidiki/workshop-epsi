@@ -1,3 +1,4 @@
+import { login } from '../../services/login';
 import React, { useState } from 'react';
 
 const Login: React.FC = () => {
@@ -14,10 +15,8 @@ const Login: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Vous pouvez ajouter ici la logique pour vérifier les informations de connexion
-        // par exemple, en envoyant une requête au serveur
-        console.log('Email:', email);
-        console.log('Mot de passe:', password);
+        const result = login(email, password);
+        console.log(result);
     };
 
     return (

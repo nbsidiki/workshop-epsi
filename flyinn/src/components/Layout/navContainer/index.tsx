@@ -2,8 +2,7 @@ import React from 'react'
 import './styles.scss'
 import Button from '../../Buttons/Button'
 import { useMediaQuery } from 'react-responsive'
-import { Link } from 'react-router-dom'
-import useService from '../../../hooks/useServices'
+import { Link, Navigate } from 'react-router-dom'
 import { logout } from '../../../services/login'
 import { toast } from 'react-toastify'
 
@@ -18,8 +17,9 @@ const NavContainer: React.FC<INavContainer> = ({ children }) => {
     try {
       logout()
       toast.success('Success')
+      Navigate({ to: '/' })
     } catch (error: any) {
-      toast(error.message)
+      console.log(error.message)
     }
   }
   return (
@@ -28,7 +28,7 @@ const NavContainer: React.FC<INavContainer> = ({ children }) => {
         <div className="navScreen-logoContainer ml-3 mt-1">
           <img src="./logoGris.png" className=' h-20' />
         </div>
-        <div className='navScreen-checkin flex flex-row justify-end mr-5 overflow-scroll'>
+        <div className='navScreen-checkin flex flex-row justify-end mr-5'>
           <Link to={'/profile'}>
             <Button className=' p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Profil</Button>
           </Link>

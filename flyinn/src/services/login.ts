@@ -42,7 +42,7 @@ export const login = async (
 ): Promise<ILoginResponse> => {
   try {
     const response: ILoginResponse = await fetch(endPoints.login, "post", {
-      login: username,
+      email: username,
       password,
       strategy: "local",
     });
