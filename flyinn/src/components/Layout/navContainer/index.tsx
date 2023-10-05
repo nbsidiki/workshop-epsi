@@ -3,9 +3,8 @@ import './styles.scss'
 import Button from '../../Buttons/Button'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
-import useService from '@hooks/useServices'
-import { logout } from '@services/login'
-import { Toast } from 'react-toastify/dist/components'
+import useService from '../../../hooks/useServices'
+import { logout } from '../../../services/login'
 import { toast } from 'react-toastify'
 
 interface INavContainer {
@@ -20,7 +19,7 @@ const NavContainer: React.FC<INavContainer> = ({ children }) => {
       logout()
       toast.success('Success')
     } catch (error: any) {
-      Toast(error.message)
+      toast(error.message)
     }
   }
   return (

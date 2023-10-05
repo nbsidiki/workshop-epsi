@@ -1,5 +1,5 @@
-import fetch from "@utils/fetch";
-import { setJwtToken, deleteJwtToken } from "@utils/session";
+import fetch from "../utils/fetch";
+import { setJwtToken, deleteJwtToken } from "../utils/session";
 
 const endPoint = ``;
 
