@@ -8,6 +8,7 @@ import LinkButton from '../../../components/Buttons/LinkButton'
 
 import fetch from '../../../utils/fetch'
 import { toast } from 'react-toastify'
+import async from 'react-select/dist/declarations/src/async/index'
 
 
 interface IArticleList { }
@@ -25,14 +26,17 @@ const ArticleList: React.FC<IArticleList> = observer(() => {
 
 
   useEffect(() => {
-    try {
-      const result: any = fetch('/chambres', 'get')
-      setData(result)
-    } catch (error: any) {
-      toast.error(error.message)
-    }
-
-  }, [])
+    (async () => {
+      try {
+        const result = await fetch('http://localhost:8000/chambres', 'get');
+        console.log(result);
+        setData(result);
+      } catch (error: any) {
+        toast.error(error.message);
+      }
+    })();
+  }, []);
+  
 
 
   return (
@@ -43,7 +47,7 @@ const ArticleList: React.FC<IArticleList> = observer(() => {
         <Loader />
       ) : (
         <>
-          <div className="grid grid-4 grid-gap-16 grid-1Mobile w-100 mt-15 weight">
+          <div className="grid grid-cols-4 gap-5 grid w-full mt-15 weight">
             {Array.isArray(data) && data.map((article, index) => renderArticleCard(article, index))}
             {/* {isPending && renderContentLoader(4)} */}
           </div>
