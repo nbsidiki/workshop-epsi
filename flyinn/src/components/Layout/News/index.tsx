@@ -11,22 +11,19 @@ const News: React.FC<INews> = observer(() => {
   const { pathname } = useLocation()
   console.log(useLocation())
   return (
-    <div className="content">
-      <div className="p-25 p-25Mobile">
-        <Routes>
-          <Route path={`${pathname}/:articleId`} element={<FindHomeContainer>
-            <ArticleDetail />
-          </FindHomeContainer>}>
-          </Route>
+    <>
+      <Route path={`${pathname}/:articleId`} element={<FindHomeContainer>
+        <ArticleDetail />
+      </FindHomeContainer>}>
+      </Route>
+      <Route path={`${pathname}`} element={<FindHomeContainer>
+        <ArticleList />
+      </FindHomeContainer>}>
 
-          <Route path={`${pathname}`} element={<FindHomeContainer>
-            <ArticleList />
-          </FindHomeContainer>}>
+      </Route>
+    </>
 
-          </Route>
-        </Routes>
-      </div>
-    </div>
+
   )
 })
 

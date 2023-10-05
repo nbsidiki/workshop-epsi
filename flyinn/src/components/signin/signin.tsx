@@ -114,7 +114,7 @@ const Signin: React.FC = () => {
 
 
                     <div className="">
-                        <label htmlFor="age" className="block text-gray-600">confirmation mot de passe:</label>
+                        <label htmlFor="confimPassword" className="block text-gray-600">confirmation mot de passe:</label>
                         <input
                             type="password"
                             id="confimPassword"

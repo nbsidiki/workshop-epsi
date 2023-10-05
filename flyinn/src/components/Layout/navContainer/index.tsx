@@ -8,9 +8,10 @@ import { toast } from 'react-toastify'
 
 interface INavContainer {
   children: React.ReactNode
+  className?: string
 }
 
-const NavContainer: React.FC<INavContainer> = ({ children }) => {
+const NavContainer: React.FC<INavContainer> = ({ children, className }) => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
 
   const onLogout = () => {
@@ -28,12 +29,15 @@ const NavContainer: React.FC<INavContainer> = ({ children }) => {
         <div className="navScreen-logoContainer ml-3 mt-1">
           <img src="./logoGris.png" className=' h-20' />
         </div>
-        <div className='navScreen-checkin flex flex-row justify-end mr-5'>
+        <div className='navScreen-checkin flex flex-row justify-end mr-5 overflow-auto'>
           <Link to={'/profile'}>
             <Button className=' p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Profil</Button>
           </Link>
           <Link to={'/findhome'}>
             <Button className=' w-full p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Trouver un logement</Button>
+          </Link>
+          <Link to={'/adLogement'}>
+            <Button className=' w-full p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Ajouter un logement</Button>
           </Link>
           <Link to={'/activity'}>
             <Button className=' p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Activités</Button>
@@ -46,7 +50,7 @@ const NavContainer: React.FC<INavContainer> = ({ children }) => {
           </Link>
         </div>
       </div>
-      <div className="navScreen-body pl-6 pr-6 vsm:grid-cols-1 grid lg:grid-cols-3 gap-7">
+      <div className={`navScreen-body ${className}`}>
         {children}
       </div>
       <div className="navScreen-footer">
