@@ -19,9 +19,9 @@ const Login: React.FC = () => {
 
     const navigate = useNavigate()
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const result = login(email, password);
+        const result = await login(email, password);
         navigate('/profile')
         console.log(result);
     };
