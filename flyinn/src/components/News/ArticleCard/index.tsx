@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.scss'
-import LinkButton from '@components/Buttons/LinkButton'
+import LinkButton from '../../../components/Buttons/LinkButton'
 
 interface IArticleCard {
   subtitle: string

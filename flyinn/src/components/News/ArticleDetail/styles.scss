@@ -1,0 +1,100 @@
+
+/*doc
+---
+title: Article detail
+name: article-detail
+category: article detail
+---
+```html_example
+<div class="content" style="width: 100%; position: relative">
+    <div class="card article">
+        <div class="article-header">
+            <div class="article-headerImage">
+                <img src="https://www.fillmurray.com/800/300" class="">
+            </div>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item link"><a href="#">Accueil</a></li>
+                <li class="breadcrumbs-item">Fier de recycler</li>
+            </ul>
+            <ul class="article-headerNav">
+                <li class='btnCarre btnCarre-carre arrow-white '><i class='icon  icon-short-arrow-prev'></i></li>
+                <li class='btnCarre btnCarre-carre arrow-primary '><i class='icon  icon-short-arrow-next'></i></li>
+            </ul>
+        </div>
+        <div class="article-body ckEdited">
+            <h1>Fier de recycler</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, mi a vestibulum fringilla, urna augue lobortis lorem, nec tempor purus justo vel urna.</h2>
+            <figure>
+                <img src="https://www.fillmurray.com/1000/500">
+                <figcaption>Legend de la photo si nécessaire</figcaption>
+            </figure>
+            <h3>Sous titre</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, mi a vestibulum fringilla, urna augue lobortis lorem, nec tempor purus justo vel urna. Curabitur diam purus, condimentum quis finibus et, semper nec risus. Phasellus ligula nibh, sodales ac odio quis, pulvinar tempor lacus. </p>
+            <blockquote>
+                <p>«  Verbatim… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, mi a vestibulum fringilla, urna augue lobortis lorem, nec tempor purus justo vel urna. » </p>
+                <p class="ckEdited--author">Jean-Michel Dubois, agriculteur, 47 ans</p>
+            </blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, mi a vestibulum fringilla, urna augue lobortis lorem, nec tempor purus justo vel urna. Curabitur diam purus, condimentum quis finibus et, semper nec risus. Phasellus ligula nibh, sodales ac odio quis, pulvinar tempor lacus. </p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                <li>Mauris hendrerit, mi a vestibulum fringilla, urna augue lobortis lorem. </li>
+                <li>Curabitur diam purus, condimentum quis finibus et, semper nec risus.</li> 
+                <li>Phasellus ligula nibh, sodales ac odio quis, pulvinar tempor lacus. </li>
+            </ul>
+        </div>
+    </div>
+</div>
+```
+*/
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  max-width: 750px;
+
+  &-header {
+    flex: 0 1 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+    &Image {
+      flex: 1 0 auto;
+      width: 100%;
+      height: 300px;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+    }
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-headerNav {
+    position: absolute;
+    right: 0;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px 65px 50px;
+    width: 100%;
+  }
+}

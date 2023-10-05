@@ -11,6 +11,8 @@ import SigninContainer from './components/Layout/signinContainer'
 import Signin from './components/signin/signin'
 import NavContainer from './components/Layout/navContainer'
 import Profile from './components/profile/profile'
+import News from './components/Layout/News'
+import Activity from './components/Activity/activity'
 
 const Router: React.FC = observer(() => {
 
@@ -31,6 +33,11 @@ const Router: React.FC = observer(() => {
                 </Route>
 
                 <Route path={routes.PROFILE} element={<NavContainer><Profile /></NavContainer>}>
+                </Route>
+
+                <Route path={routes.FINDHOME} element={<News />}>
+                </Route>
+                <Route path={routes.ACTIVITY} element={<NavContainer><Activity /></NavContainer>}>
                 </Route>
 
 

@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.scss'
 import Button from '../../Buttons/Button'
 import { useMediaQuery } from 'react-responsive'
+import { Link } from 'react-router-dom'
 
 interface ILandingPageContainer {
   children: React.ReactNode
@@ -16,8 +17,12 @@ const LandingPageContainer: React.FC<ILandingPageContainer> = ({ children }) => 
           <img src="./logoGris.png" className=' h-20' />
         </div>
         <div className='landingPageScreen-checkin flex flex-row justify-end mr-5'>
+          <Link to={'/signin'}>
           <Button className=' p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Inscription</Button>
+          </Link>
+          <Link to={'/login'}>
           <Button className=' p-5 text-white hover:border-b-2 hover:border-gray-300' type='button'>Connexion</Button>
+          </Link>
         </div>
       </div>
       <div className="landingPageScreen-body flex-wrap ">

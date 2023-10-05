@@ -4,6 +4,8 @@ const routes = {
   NEWS: "/news",
   PROFILE: "/profile",
   SIGNIN: "/signin",
+  FINDHOME:"/findhome",
+  ACTIVITY: "/activity"
 };
 
 export default routes;

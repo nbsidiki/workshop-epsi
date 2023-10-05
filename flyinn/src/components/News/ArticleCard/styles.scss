@@ -1,4 +1,3 @@
-@import '~assets/sass/utils/styleSheetVariables';
 
 /* FORMS */
 
@@ -223,9 +222,8 @@ Le widget Meteo doit etre positioné en troisiéme position obligatoirement
     min-height: 160px;
 
     &-text {
-      line-height: $veryLarge !important;
-      font-weight: $light;
-      color: $black;
+      font-weight: lighter;
+      color: black;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -237,8 +235,7 @@ Le widget Meteo doit etre positioné en troisiéme position obligatoirement
       display: flex;
       flex: initial !important;
       align-items: center;
-      font-weight: $mediumW;
-      @extend %animatedForward;
+      font-weight: medium;
 
       &:after {
         content: '';
@@ -251,13 +248,11 @@ Le widget Meteo doit etre positioné en troisiéme position obligatoirement
       }
 
       i {
-        color: map_get(map_get($colors, 'deep-orange'), 'primary');
         margin-right: 10px;
       }
 
-      color: map_get(map_get($colors, 'secondary'), 'primary');
       &:hover {
-        font-weight: $mediumW;
+        font-weight: medium;
       }
     }
   }

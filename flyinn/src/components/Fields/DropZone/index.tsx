@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react'
 import ReactDropZone, { useDropzone } from 'react-dropzone'
 import { useField } from 'formik'
-import Alert from '@components/Alert'
+import Alert from '../../Alert'
 import './styles.scss'
-import { formatBytes } from '@utils/files'
+import { formatBytes } from '../../../utils/files'
 
 interface IDropZone {
   name: string
