@@ -1,5 +1,8 @@
+import useCheckToken from '../../hooks/useCheckToken';
 import { login } from '../../services/login';
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
 const Login: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -13,9 +16,13 @@ const Login: React.FC = () => {
         setPassword(event.target.value);
     };
 
+
+    const navigate = useNavigate()
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const result = login(email, password);
+        navigate('/profile')
         console.log(result);
     };
 

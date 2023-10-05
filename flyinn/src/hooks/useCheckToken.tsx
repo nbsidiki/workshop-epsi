@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { getJwtToken } from '@utils/session'
+import { getJwtToken } from '../utils/session'
 import jwtDecode from 'jwt-decode'
 
 const useCheckToken = (handleTokenExpiration: () => void) => {

@@ -1,14 +1,21 @@
+import useCheckToken from '../../hooks/useCheckToken';
 import Button from '../../components/Buttons/Button';
 import { constants } from 'crypto';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 interface IProfileProps {
     userId?: number;
 }
 const Profile: React.FC<IProfileProps> = ({ userId }) => {
     const [data, setData] = useState([])
-
+    const navigate = useNavigate()
+    const onTokenExpiration = () => {
+        toast.error("reconnectez vous")
+        navigate('/')
+    };
+    useCheckToken(onTokenExpiration)
 
     return (
         <>
