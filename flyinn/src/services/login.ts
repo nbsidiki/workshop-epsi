@@ -33,7 +33,7 @@ export interface ILoginResponse {
     strategy: string;
   };
   user: IUser;
-  accessToken: string;
+  token: string;
 }
 
 export const login = async (
@@ -41,13 +41,13 @@ export const login = async (
   password: string
 ): Promise<ILoginResponse> => {
   try {
-    const response: ILoginResponse = await fetch(endPoints.login, "post", {
+    const response: ILoginResponse = await fetch('http://localhost:8000/login', "post", {
       email: username,
       password,
       strategy: "local",
     });
 
-    setJwtToken(response.accessToken);
+    setJwtToken(response.token);
 
     return response;
   } catch (error) {
