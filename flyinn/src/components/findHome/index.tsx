@@ -55,7 +55,7 @@ const FindHomeContainer: React.FC<IFindHomeContainer> = ({ children }) => {
           </Link>
         </div>
       </div>
-      <div className="navScreen-body grid grid-cols-1 gap-1">
+      <div className="navScreen-body">
         {children}
       </div>
       <div className="navScreen-footer">

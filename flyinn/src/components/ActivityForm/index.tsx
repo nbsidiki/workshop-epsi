@@ -27,10 +27,10 @@ const ActivityForm: React.FC = () => {
         setPrenom(event.target.value);
     };
 
-
+    const navigate = useNavigate()
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const navigate = useNavigate()
+        
         try {
 
             await fetch('', 'POST', {

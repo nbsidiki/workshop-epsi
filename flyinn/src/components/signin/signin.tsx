@@ -43,7 +43,7 @@ const Signin: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        fetch('', 'POST', {
+        fetch('http://localhost:8000/register', 'POST', {
             name: name,
             prenom: prenom,
             email: email,
