@@ -2,9 +2,10 @@ import React from 'react'
 import './styles.scss'
 import Button from '../Buttons/Button'
 import { useMediaQuery } from 'react-responsive'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { logout } from '../../services/login'
 import { toast } from 'react-toastify'
+import useCheckToken from '../../hooks/useCheckToken'
 
 interface IFindHomeContainer {
   children: React.ReactNode
@@ -21,6 +22,12 @@ const FindHomeContainer: React.FC<IFindHomeContainer> = ({ children }) => {
       console.log(error.message)
     }
   }
+  const navigate = useNavigate()
+  const onTokenExpiration = () => {
+    toast.error("reconnectez vous")
+    navigate('/')
+  };
+  useCheckToken(onTokenExpiration)
   return (
     <div className="navScreen h-full">
       <div className="navScreen-header flex-1 flex-row justify-between ">

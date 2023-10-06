@@ -2,9 +2,10 @@ import React from 'react'
 import './styles.scss'
 import Button from '../../Buttons/Button'
 import { useMediaQuery } from 'react-responsive'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { logout } from '../../../services/login'
 import { toast } from 'react-toastify'
+import useCheckToken from '../../../hooks/useCheckToken'
 
 interface INavContainer {
   children: React.ReactNode
@@ -14,6 +15,12 @@ interface INavContainer {
 const NavContainer: React.FC<INavContainer> = ({ children, className }) => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 800px)' })
 
+  const navigate = useNavigate()
+  const onTokenExpiration = () => {
+    toast.error("reconnectez vous")
+    navigate('/')
+  };
+  useCheckToken(onTokenExpiration)
   const onLogout = () => {
     try {
       logout()
